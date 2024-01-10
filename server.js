@@ -8,12 +8,18 @@ const app = express()
 
 // configure the app
 
+app.set('view engine', 'ejs')
+
 // mount middleware
 
 // mount routes
 
-app.get('/', function(req, res){
-  res.send('<h1>hello, friend</h1>')
+// app.get('/', function(req, res){
+//   res.send('<h1>hello, friend</h1>')
+// })
+
+app.get('/home', function(req, res){
+  res.render('home')
 })
 
 // tell the app to listen on port 3000
