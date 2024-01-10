@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spuds</title>
+</head>
+<body>
+
+  <h1>Spuds!</h1>
+  <ul>
+    <% spuds.forEach(spud => { %>
+      <li>
+        <%= spud.text %> - <%= spud.isSpud ? 'true' : 'false' %>
+      </li>
+    <% }) %>
+  </ul>
+  
+</body>
+</html>
