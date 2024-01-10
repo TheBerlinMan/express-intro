@@ -1,6 +1,7 @@
 // import modules
 
 import express from 'express'
+import { spuds } from './data/spud-data.js'
 
 // create express app
 
@@ -20,6 +21,11 @@ app.set('view engine', 'ejs')
 
 app.get('/home', function(req, res){
   res.render('home')
+})
+app.get('/spuds', function(req, res){
+  res.render('spuds/index', {
+    spuds: spuds
+  })
 })
 
 // tell the app to listen on port 3000
